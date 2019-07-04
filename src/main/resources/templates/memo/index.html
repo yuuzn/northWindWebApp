@@ -31,7 +31,7 @@
 				<td th:text="${product.category}"></td>
 				<td th:text="${product.favorite}"></td>
 				<td><a class="btn btn-default" href="/memo/edit">編集</a></td>
-				<td><a class="btn btn-default" href="/memo/delete">削除</a></td>
+				<td><a class="btn btn-default" th:href="@{/memo/delete/{id}(id=${product.id})}">削除</a></td>
 			</tr>
 		</table>
 		<a class="btn btn-default" href="/memo/new">新規作成</a>
