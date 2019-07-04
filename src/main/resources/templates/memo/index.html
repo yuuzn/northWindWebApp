@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>一覧</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>INDEX</h1>
+		<table class="table">
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>DATE</th>
+				<th>TIME</th>
+				<th>COMMENT</th>
+				<th>CATEGORY</th>
+				<th>FAVORITE</th>
+				<th>EDIT</th>
+				<th>DELETE</th>
+			</tr>
+			<tr th:each="product: ${products}">
+				<td th:text="${product.id}"></td>
+				<td th:text="${product.name}"></td>
+				<td th:text="${product.date}"></td>
+				<td th:text="${product.time}"></td>
+				<td th:text="${product.comment}"></td>
+				<td th:text="${product.category}"></td>
+				<td th:text="${product.favorite}"></td>
+				<td><a class="btn btn-default" href="/memo/edit">編集</a></td>
+				<td><a class="btn btn-default" href="/memo/delete">削除</a></td>
+			</tr>
+		</table>
+		<a class="btn btn-default" href="/memo/new">新規作成</a>
+	</div>
+</body>
+</html>

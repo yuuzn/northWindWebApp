@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>新規作成</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Create</h1>
+		<a class="btn btn-default" href="/memo">戻る</a>
+		<form method="post" th:action="@{/memo/save}">
+			<p>
+				id: <input type="number" name="id" size="10">
+			</p>
+			<p>
+				name:<input type="text" name="name" size="10">
+			</p>
+			<p>
+				date:<input type="number" name="date" size="10">
+			</p>
+			<p>
+				time:<input type="number" name="time" size="10">
+			</p>
+			<p>
+				comment:<input type="text" name="comment" size="40">
+			</p>
+			<p>
+				category:<select name="category">
+					<option value="1">仕事</option>
+					<option value="2">勉強</option>
+					<option value="3">家事</option>
+					<option value="4">趣味</option>
+				</select>
+			</p>
+			<p>
+				favorite:<input type="text" name="favorite">
+			</p>
+			<input type="submit" value="登録" />
+		</form>
+	</div>
+</body>
+</html>
