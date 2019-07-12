@@ -11,20 +11,16 @@
 	<div class="container">
 		<h1>Edit</h1>
 		<a class="btn btn-default" href="/memo">戻る</a>
-		<table class="table">
-			<tr>
-				<th>ID</th>
-				<th>NAME</th>
-				<th>DATE</th>
-				<th>TIME</th>
-				<th>COMMENT</th>
-				<th>CATEGORY</th>
-				<th>FAVORITE</th>
-				<th>EDIT</th>
-				<th>DELETE</th>
-			</tr>
-		</table>
-		<a class="btn btn-default" href="/memo">登録</a>
+		<form method="post" th:action="@{/memo/edit/complete}">
+			<input type="text" th:field="${product.id}" />
+			<input type="text" th:field="${product.name}" />
+			<input type="text" th:field="${product.date}" />
+			<input type="text" th:field="${product.time}" />
+			<input type="text" th:field="${product.comment}" />
+			<input type="text" th:field="${product.category}" />
+			<input type="text" th:field="${product.favorite}" />
+			<input type="submit" value="更新" />
+		</form>
 	</div>
 </body>
 </html>

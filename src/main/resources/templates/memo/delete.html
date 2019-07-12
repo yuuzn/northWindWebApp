@@ -11,20 +11,16 @@
 	<div class="container">
 		<h1>Delete</h1>
 		<a class="btn btn-default" href="/memo">戻る</a>
-		<table class="table">
-			<tr>
-				<th>ID</th>
-				<th>NAME</th>
-				<th>DATE</th>
-				<th>TIME</th>
-				<th>COMMENT</th>
-				<th>CATEGORY</th>
-				<th>FAVORITE</th>
-				<th>EDIT</th>
-				<th>DELETE</th>
-			</tr>
-		</table>
-		<a class="btn btn-default" href="/memo">登録</a>
+		<form method="post" th:action="@{/memo/delete/complete}">
+			<input type="text" th:field="${product.id}" readonly />
+			<input type="text" th:field="${product.name}" readonly />
+			<input type="text" th:field="${product.date}" readonly />
+			<input type="text" th:field="${product.time}" readonly />
+			<input type="text" th:field="${product.comment}" readonly />
+			<input type="text" th:field="${product.category}" readonly />
+			<input type="text" th:field="${product.favorite}" readonly />
+			<input type="submit" value="削除" />
+		</form>
 	</div>
 </body>
 </html>

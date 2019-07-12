@@ -16,11 +16,11 @@ public class ProductService {
         return productRepository.save(product);
     }
 
-    public Product getOne(Integer productId){
-        return productRepository.getOne(productId);
+    public Product getOne(Integer id){
+        return productRepository.getOne(id);
     }
 
-    public void deleteOne(Integer productId){
-    	productRepository.deleteById(productId);
+    public void deleteOne(Integer id){
+    	productRepository.deleteById(id);
     }
 }
