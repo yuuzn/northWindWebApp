@@ -6754,4 +6754,37 @@ button.close {
     display: none !important;
   }
 }
+.edit {
+  color: #ff8080;
+}
+.delete {
+  color: #0080c0;
+}
+.star-rating {
+  position: relative;
+  display:inline-block;
+  font-size: 25px;
+}
+.star-rating .star-rating-item{
+  position:absolute;
+  overflow: hidden;
+}
+.star-rating .star-rating-item:before{
+  content:"★★★★★";
+  color: #ffcc33;
+}
+.star-rating:after {
+  content:"★★★★★";
+  color: #ccc;
+}
+.star {
+	font-size: 10px;
+	position: relative;
+	width: 0;
+	height: 0;
+	border-right: 0.8em solid transparent;
+	border-left: 0.8em solid transparent;
+	border-bottom: 0.55em solid #39a9d6;
+	transform: rotate(35deg);
+}
 /*# sourceMappingURL=bootstrap.css.map */

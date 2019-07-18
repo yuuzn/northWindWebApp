@@ -23,4 +23,8 @@ public class ProductService {
     public void deleteOne(Integer id){
     	productRepository.deleteById(id);
     }
+
+    public Product searchByName(String name) {
+    	return productRepository.findByName(name);
+    }
 }

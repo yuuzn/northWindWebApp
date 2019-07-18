@@ -19,8 +19,8 @@
 				<th>COMMENT</th>
 				<th>CATEGORY</th>
 				<th>FAVORITE</th>
-				<th>EDIT</th>
-				<th>DELETE</th>
+				<th class="edit">EDIT</th>
+				<th class="delete">DELETE</th>
 			</tr>
 			<tr th:each="product: ${products}">
 				<td th:text="${product.id}"></td>
@@ -29,7 +29,7 @@
 				<td th:text="${product.time}"></td>
 				<td th:text="${product.comment}"></td>
 				<td th:text="${product.category}"></td>
-				<td th:text="${product.favorite}"></td>
+				<td th:text="${product.favorite}? '★' : '☆'"></td>
 				<td><a class="btn btn-default" th:href="@{/memo/edit/{id}(id=${product.id})}">編集</a></td>
 				<td><a class="btn btn-default" th:href="@{/memo/delete/{id}(id=${product.id})}">削除</a></td>
 			</tr>

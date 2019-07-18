@@ -7,7 +7,7 @@ public class ProductForm {
 	private Integer time;
 	private String comment;
 	private Integer category;
-	private Integer favorite;
+	private Boolean favorite;
 
 	public Integer getId() {
 		return id;
@@ -57,11 +57,11 @@ public class ProductForm {
 		this.category = category;
 	}
 
-	public Integer getFavorite() {
+	public Boolean getFavorite() {
 		return favorite;
 	}
 
-	public void setFavorite(Integer favorite) {
+	public void setFavorite(Boolean favorite) {
 		this.favorite = favorite;
 	}
 
