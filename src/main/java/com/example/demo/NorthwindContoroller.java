@@ -73,4 +73,7 @@ public class NorthwindContoroller {
 		service.deleteOne(productOne.getId());
 		return "redirect:/memo";
 	}
+//	@PostMapping(path="create")
+//	String create(@Validated Customer)
+
 }

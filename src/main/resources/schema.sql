@@ -11,3 +11,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 create sequence hibernate_sequence start with 100 increment by 1;
 
+
+CREATE TABLE `users` (
+  `username` varchar(255) NOT NULL,
+  `password` int(11) DEFAULT NULL
+) ;
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`username`);
+create sequence hibernate_sequence start with 100 increment by 1;
+
